@@ -1,0 +1,56 @@
+﻿@page
+@model DetailsModel
+@{
+    ViewData["Title"] = "Office Details";
+}
+
+<style>
+    #details {
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 20px;
+        border-color: #596773;
+        color: #596773;
+        position: relative;
+        top: 100px;
+        padding: 10px;
+    }
+    
+</style>
+
+
+<div class="text-center" style="margin-top:30px">
+        <h1 class="display-4">Office Details</h1>   
+</div>
+
+    <div id="details">
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <ul style="list-style-type:none;">
+                        <li><h3>[OFFICE NAME]</h3></li>
+                        <li><h6>[LOCATION TAGS]</li>
+                        <li><br><br><h5>[STATUS]</h5></li>
+                        <li><br><strong>Region:</strong>    [REGION]</li>
+                        <li><br><strong>Address:</strong><br>[ADDRESS]</li>
+                    </ul>
+                </div>
+                <div class="col-sm-8">
+                    <ul style="list-style-type:none;">
+                        <li><strong>Office Services:</strong>   [Text]</li>
+                        <li><strong>Visitors Allowed:</strong>   [Text]</li>
+                        <li><strong>Face Coverings:</strong> [Text]</li>
+                        <li><strong>Temperature Checks:</strong> [Text]</li>
+                        <li><strong>Special Considerations:</strong> [Text]</li>
+                        <li><strong>Special Consideration Details:</strong> [Test text test text test text test text test text test text test text ]</li>
+                        <li><strong>Tech Support:</strong> [Text]</li>
+                        <li><strong>Dress Code:</strong> [Text]</li>
+                        <li><strong>Additional Information:</strong> [Test text test text test text test text test text test text test text ]</li>
+                        <li><br><br><button type="button" id="purple" class="btn btn-primary btn-lg">Export</button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>     
+
+    </div>

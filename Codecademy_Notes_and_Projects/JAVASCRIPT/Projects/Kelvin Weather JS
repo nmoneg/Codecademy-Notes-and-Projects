@@ -1,0 +1,22 @@
+//Baseline for our conversion calculations
+
+const kelvin = 288;
+
+//Conversion from Kelvin to Celsius
+
+let celsius = kelvin - 273;
+
+//Conversion from Celsius to Fahrenheit
+
+let fahrenheit = celsius * (9/5) + 32;
+
+//Rounds the Fahrenheit calculation down to the nearest integer, then prints the result to the console.
+
+fahrenheit = Math.floor(fahrenheit);
+
+console.log(`The temperature is ${fahrenheit} degrees Fahrenheit.`)
+
+//Converts Celsius to Newton, rounds to the nearest integer, and prints to the console
+
+let newton = Math.floor(celsius * (33/100));
+console.log(`The temperature in Newton is ${newton} degrees.`)

@@ -1,0 +1,30 @@
+#demobox1 {
+    background-color:chartreuse;
+    width: 50px; 
+    height: 50px;
+  }
+
+#demobox2 {
+    background-color:rosybrown;
+    width: 50px; 
+    height: 50px;
+  }
+
+.form-check-label2 {
+    align-items: center;
+    justify-content: center;
+}
+
+#exampleFormControlTextarea1 {
+    background-color: crimson;
+}
+
+.container {
+    background-color: bisque;
+}
+
+* {
+    font-family: "Lucida Console", Courier, monospace;
+    background-color: blanchedalmond;
+}
+

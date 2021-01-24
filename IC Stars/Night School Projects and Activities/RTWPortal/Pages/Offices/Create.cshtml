@@ -1,0 +1,89 @@
+@page
+@model RTWPortal.Pages.Offices.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Office</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Office.Office_Name" class="control-label"></label>
+                <input asp-for="Office.Office_Name" class="form-control" />
+                <span asp-validation-for="Office.Office_Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Office.Location_Type" class="control-label"></label>
+                <input asp-for="Office.Location_Type" class="form-control" />
+                <span asp-validation-for="Office.Location_Type" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Office.Status" class="control-label"></label>
+                <input asp-for="Office.Status" class="form-control" />
+                <span asp-validation-for="Office.Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Office.Services" class="control-label"></label>
+                <input asp-for="Office.Services" class="form-control" />
+                <span asp-validation-for="Office.Services" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Office.Market_Unit" class="control-label"></label>
+                <input asp-for="Office.Market_Unit" class="form-control" />
+                <span asp-validation-for="Office.Market_Unit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Office.City" class="control-label"></label>
+                <input asp-for="Office.City" class="form-control" />
+                <span asp-validation-for="Office.City" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Office.Street_Address" class="control-label"></label>
+                <input asp-for="Office.Street_Address" class="form-control" />
+                <span asp-validation-for="Office.Street_Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Office.Zip_Code" class="control-label"></label>
+                <input asp-for="Office.Zip_Code" class="form-control" />
+                <span asp-validation-for="Office.Zip_Code" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Office.Dress_Code" class="control-label"></label>
+                <input asp-for="Office.Dress_Code" class="form-control" />
+                <span asp-validation-for="Office.Dress_Code" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Office.Tech_Support" class="control-label"></label>
+                <input asp-for="Office.Tech_Support" class="form-control" />
+                <span asp-validation-for="Office.Tech_Support" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Office.Additional_Info" class="control-label"></label>
+                <input asp-for="Office.Additional_Info" class="form-control" />
+                <span asp-validation-for="Office.Additional_Info" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Office.User_Count" class="control-label"></label>
+                <input asp-for="Office.User_Count" class="form-control" />
+                <span asp-validation-for="Office.User_Count" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

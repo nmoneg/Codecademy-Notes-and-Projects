@@ -1,0 +1,90 @@
+@page
+@model ContosoUniversity.Pages.Students.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Students[0].LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Students[0].FirstMidName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Students[0].EnrollmentDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Students[0].Office)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Students[0].Region)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Students[0].Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Students[0].TemperatureCheck)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Students[0].FaceCoverings)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Students[0].VisitorsAllowed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Students[0].LoginDate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Students) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstMidName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EnrollmentDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Office)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Region)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TemperatureCheck)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FaceCoverings)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VisitorsAllowed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LoginDate)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

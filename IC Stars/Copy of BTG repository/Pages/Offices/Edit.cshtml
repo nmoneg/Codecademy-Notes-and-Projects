@@ -1,0 +1,204 @@
+@page
+@model RTWPortal.Pages.Offices.EditModel
+@{
+    ViewData["Title"] = "Edit";
+}
+<div class="text-center">
+    <h2>Edit Office Information</h2>
+
+    
+<hr/>
+        <form method="post">
+
+        <div class="container" id="scroll">
+        <div class="row">    
+        <div class="col-sm-6">
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Office.ID" />
+            <div class="form-group">
+                <label asp-for="Office.Office_Name" class="control-label"><strong>Location Name</strong></label>
+                <input type="Text" class="form-control" id="InputLName" placeholder="Enter Location Name" asp-for="Office.Office_Name" class="form-control" />
+                <span asp-validation-for="Office.Office_Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Office.Location_Type" class="control-label"><strong>Location Type</strong></label>
+                <small id="InputLTHelp" class="form-text text-muted">Select multiple with Ctrl + click</small>
+                <select asp-for="Office.Location_Type" class="form-control" multiple class="form-control" id="InputLType" placeholder="Select Location Type">
+                        <option> </option>
+                        <option>Corporate</option>
+                        <option>Innovation</option>
+                        <option>Delivery Center</option>
+                        <option>Business Space/Project</option>
+                </select>
+                <span asp-validation-for="Office.Location_Type" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Office.Status" class="control-label"><strong>Office Status</strong></label>
+                <select asp-for="Office.Status" class="form-control" id="InputStatus" placeholder="Select Status">
+                        <option> </option>
+                        <option>Open</option>
+                        <option>Closed</option>
+                        <option>By Invitation Only</option>
+                        <option>Reservation Required</option>
+                        <option>Business As Usual</option>
+                </select>
+                <span asp-validation-for="Office.Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Office.Services" class="control-label"><strong>Office Services</strong></label>
+                <select asp-for="Office.Services" class="form-control" id="InputServices" placeholder="Select Office Service">
+                        <option> </option>
+                        <option>Full</option>
+                        <option>Limited</option>
+                        <option>Suspended</option>
+                </select>
+                <span asp-validation-for="Office.Services" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Office.Market_Unit" class="control-label"><strong>Market Unit</strong></label>
+                <select asp-for="Office.Market_Unit" class="form-control" id="InputMarketUnit" placeholder="Select Market Unit">
+                        <option> </option>
+                        <option>Midwest</option>
+                        <option>South</option>
+                        <option>East</option>
+                        <option>West</option>
+                    </select>
+                <span asp-validation-for="Office.Market_Unit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Office.City" class="control-label"><strong>City</strong></label>
+                <select asp-for="Office.City" class="form-control" id="InputCity" placeholder="Select City">
+                        <option> </option>
+                        <option>Arizona</option>
+                        <option>Arkansas</option>
+                        <option>California</option>
+                        <option>Colorado</option>
+                        <option>Connecticut</option>
+                        <option>District of Columbia</option>
+                        <option>Florida</option>
+                        <option>Georgia</option>
+                        <option>Idaho</option>
+                        <option>Illinois</option>
+                        <option>Indianapolis</option>
+                        <option>Iowa</option>
+                        <option>Kansas</option>
+                        <option>Maryland</option>
+                        <option>Massachusetts</option>
+                        <option>Michigan</option>
+                        <option>Minnesota</option>
+                        <option>Missouri</option>
+                        <option>New Jersey</option>
+                        <option>New York</option>
+                        <option>North Carolina</option>
+                        <option>Ohio</option>
+                        <option>Oklahoma</option>
+                        <option>Oregon</option>
+                        <option>Pennsylvania</option>
+                        <option>South Carolina</option> 
+                        <option>Tennessee</option>
+                        <option>Texas</option>
+                        <option>Virginia</option>
+                        <option>Washington</option>
+                        <option>Wisconsin</option>
+                </select>
+                <span asp-validation-for="Office.City" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Office.Street_Address" class="control-label"><strong>Street Address</strong></label>
+                <input type="text" asp-for="Office.Street_Address" class="form-control" id="inputAddress" placeholder=" Enter Street Address">
+                <span asp-validation-for="Office.Street_Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Office.Zip_Code" class="control-label"><strong>Zip Code</strong></label>
+                <input type="Text" asp-for="Office.Zip_Code" class="form-control" id="InputZipCode" placeholder="Enter Zip Code">
+                <span asp-validation-for="Office.Zip_Code" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Office.Dress_Code" class="control-label"><strong>Dress Code</strong></label>
+                <input type="Text" asp-for="Office.Dress_Code" class="form-control" id="InputDC" placeholder="Enter Dress Code Information">
+                <span asp-validation-for="Office.Dress_Code" class="text-danger"></span>
+            </div>
+
+        </div>
+
+        <div class="col-sm-6">
+            
+            <div class="form-group">
+                <label asp-for="Office.Tech_Support" class="control-label"><strong>Tech Support</strong></label>
+                <select asp-for="Office.Tech_Support" class="form-control" id="InputTechS" placeholder="Select Tech Support Option">
+                        <option> </option>
+                        <option>Yes</option>
+                        <option>Not Currently</option>
+                        <option>Reservation Only</option>
+                </select>
+                <span asp-validation-for="Office.Tech_Support" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Office.Additional_Info" class="control-label"><strong>Additional Information</strong></label>
+                <textarea asp-for="Office.Additional_Info" class="form-control" id="InputInfo" rows="4" placeholder="Enter Additional Information"></textarea>
+                <span asp-validation-for="Office.Additional_Info" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Office.Visitors" class="control-label"><strong>Clients/Visitors</strong></label>
+                <select asp-for="Office.Visitors" class="form-control" id="InputVisitors" placeholder="Select Visitor Status">
+                        <option> </option>
+                        <option>Yes</option>
+                        <option>No</option>
+                </select>
+                <span asp-validation-for="Office.Visitors" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Office.Special_Considerations" class="control-label"><strong>Special Considerations</strong></label>
+                <input  class="form-control" />
+                <small id="InputSCHelp" class="form-text text-muted">Select multiple with Ctrl + click</small>
+                    <select asp-for="Office.Special_Considerations" multiple class="form-control" id="InputSC" placeholder="Select Location Type">
+                        <option> </option>
+                        <option>Physical Distancing</option>
+                        <option>Temperature Checks</option>
+                        <option>Other Protocols</option>
+                        <option>None</option>
+                    </select>
+                <span asp-validation-for="Office.Special_Considerations" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Office.Special_Consideration_Details" class="control-label"><strong>Special Consideration Details</strong></label>
+                <textarea asp-for="Office.Special_Consideration_Details" class="form-control" id="InputSCD" rows="4" placeholder="Enter Special Consideration Details"></textarea>
+                <span asp-validation-for="Office.Special_Consideration_Details" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Office.Temp_Checks" class="control-label"><strong>Temperature Checking</strong></label>
+                <select asp-for="Office.Temp_Checks" class="form-control" id="InputTempCh" placeholder="Select Temperature Check Status">
+                        <option> </option>
+                        <option>Conducting – Employee Self-Check</option>
+                        <option>Conducting – By Accenture</option>
+                        <option>Conducting by building (not Accenture)</option>
+                        <option>Not Conducting</option>
+                </select>
+                <span asp-validation-for="Office.Temp_Checks" class="text-danger"></span>
+            </div>
+            @* <div class="form-group">
+                <label asp-for="Office.User_Count" class="control-label"></label>
+                <input asp-for="Office.User_Count" class="form-control" />
+                <span asp-validation-for="Office.User_Count" class="text-danger"></span>
+            </div> *@
+            </div>
+            </div>
+            </div>
+            
+            <div class="form-group">
+                <input type="submit" value="Save" id="purple" class="btn btn-primary" />
+            </div>
+        </form>
+        <div>
+            <a asp-page="./Index">Back to List</a>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

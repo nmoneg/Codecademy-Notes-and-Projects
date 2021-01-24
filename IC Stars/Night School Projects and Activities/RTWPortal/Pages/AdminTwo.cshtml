@@ -1,0 +1,161 @@
+﻿@page
+@model AdminTwoModel
+@{
+    ViewData["Title"] = "Edit Office Information";
+}
+
+<style>
+    #Edit {
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 20px;
+        border-color: #596773;
+        color: #596773;
+        position: relative;
+        top: 10px;
+        padding: 10px;
+    }
+
+    #scroll{
+        height: 500px;
+        overflow: scroll;
+    }
+       
+</style>
+
+
+<div class="text-center" id="Edit" style="margin-top:30px">
+        <h1 class="display-4">Edit Office Information</h1>   
+</div>   
+
+<div  class="text-center" id="Edit" style="margin-top: 30px">
+         <h3 class="form-signin-heading"> Office: Chicago Innovation Hub</h3>
+            <a href="url">Add New</a> |
+            <a href="url">Edit</a> |
+            <a href="url">Import/Export</a> |
+            <a href="url">Delete</a>
+
+            <br>
+            <br>
+                <h5><strong>OFFICE INFORMATION</strong></h5>
+
+    <div class="container" id="scroll">
+        <div class="row">
+            
+            <div class="col-sm-6">
+            <form>
+                    
+                <div class="form-group">
+                    <label for="InputLName"><strong>Location Name</strong></label>
+                    <input type="Text" class="form-control" id="InputLName" placeholder="Enter Location Name">
+                </div>
+                <div class="form-group">
+                    <label for="InputMarketUnit"><strong>Market Unit</strong></label>
+                    <select class="form-control" id="InputMarketUnit" placeholder="Select Market Unit">
+                        <option>Midwest</option>
+                        <option>South</option>
+                        <option>East</option>
+                        <option>West</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="InputCity"><strong>City</strong></label>
+                    <select class="form-control" id="InputCity" placeholder="Select City">
+                        <option>[city array here]</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="inputAddress"><strong>Street Address</strong></label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder=" Enter Street Address">
+                </div>
+                <div class="form-group">
+                    <label for="InputZip"><strong>Zip Code</strong></label>
+                    <input type="Text" class="form-control" id="InputCity" placeholder="Enter Zip Code">
+                </div>
+                <div class="form-group">
+                    <label for="InputLType"><strong>Location Type</strong></label>
+                    <small id="LTypeHelp" class="form-text text-muted">Select multiple with Ctrl + click</small>
+                    <select multiple class="form-control" id="InputLType" placeholder="Select Location Type">
+                        <option>Corporate</option>
+                        <option>Innovation</option>
+                        <option>Delivery Center</option>
+                        <option>Business Space/Project</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="InputCity"><strong>Office Status</strong></label>
+                    <select class="form-control" id="InputCity" placeholder="Select City">
+                        <option>[office status array here]</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="InputInfo"><strong>Additional Information</strong></label>
+                    <textarea class="form-control" id="InputInfo" rows="5" placeholder="Enter Additional Information"></textarea>
+                </div>
+                
+            </form>
+            </div>
+            
+            <div class="col-sm-6">
+            <form>
+                    
+                <div class="form-group">
+                    <label for="InputServices"><strong>Office Services</strong></label>
+                    <select class="form-control" id="InputServices" placeholder="Select Office Service">
+                        <option>[Services Array here]</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="InputVisitors"><strong>Clients/Visitors</strong></label>
+                    <select class="form-control" id="InputVisitors" placeholder="Select Visitor Status">
+                        <option>[Visitor Array here]</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="InputFaceCov"><strong>Face Coverings</strong></label>
+                    <select class="form-control" id="InputFaceCov" placeholder="Select Face Covering Status">
+                        <option>Required</option>
+                        <option>Optional</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="InputTempCh"><strong>Temperature Checks</strong></label>
+                    <select class="form-control" id="InputTempCh" placeholder="Select Temperature Check Status">
+                        <option>[Temp Check Array here]</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="InputSC"><strong>Special Considerations</strong></label>
+                    <small id="InputSCHelp" class="form-text text-muted">Select multiple with Ctrl + click</small>
+                    <select multiple class="form-control" id="InputSC" placeholder="Select Location Type">
+                        <option>[SC Array here]</option>
+                        <option>[SC Array here]</option>
+                        <option>[SC Array here]</option>
+                        <option>[SC Array here]</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="InputSCD"><strong>Special Consideration Details</strong></label>
+                    <textarea class="form-control" id="InputSCD" rows="5" placeholder="Enter Special Consideration Details"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="InputTechS"><strong>Tech Support</strong></label>
+                    <select class="form-control" id="InputTechS" placeholder="Select Tech Support Option">
+                        <option>[Tech Support Array here]</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="InputDC"><strong>Dress Code</strong></label>
+                    <input type="Text" class="form-control" id="InputDC" placeholder="Enter Dress Code Information">
+                </div>
+                
+            </form>
+            </div>
+
+            </div>
+            </div>
+    
+    <button type="Submit" class="btn btn-primary">Save </button>
+    <button type="Submit" class="btn btn-primary">Cancel </button>
+        
+</div>

@@ -1,0 +1,83 @@
+﻿@page
+@model AdminModel
+@{
+    ViewData["Title"] = "Select an Office";
+}
+<style>
+    #admin {
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 20px;
+        border-color: #596773;
+        color: #596773;
+        position: relative;
+        top: 10px;
+        padding: 10px;
+    }
+
+  
+</style>
+
+<body>
+<div class="text-center" style="margin-top:30px">
+        <h1 class="display-4">Edit Office Information</h1>   
+</div>
+<div class="text-center" style="margin-top: 10px">
+    <div id="admin">
+        <h3>Accenture Location</h3>   
+    </div>
+    <br>
+    <br>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Location Name</th>
+        <th>Market Unit</th>
+        <th>City</th>
+        <th>Street Address</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Innovation Hub</td>
+        <td>MidWest</td>
+        <td>Chicago</td>
+        <td>500 W. Madison St, 22nd & 23rd Floors</td>
+      </tr>      
+      <tr class="success">
+        <td>Innovation Hub</td>
+        <td>MidWest</td>
+        <td>Chicago</td>
+        <td>500 W. Madison St, 22nd & 23rd Floors</td>
+      </tr>
+      <tr class="danger">
+        <td>Innovation Hub</td>
+        <td>MidWest</td>
+        <td>Chicago</td>
+        <td>500 W. Madison St, 22nd & 23rd Floors</td>
+      </tr>
+      <td>Innovation Hub</td>
+        <td>MidWest</td>
+        <td>Chicago</td>
+        <td>500 W. Madison St, 22nd & 23rd Floors</td>
+      </tr>
+      <td>Innovation Hub</td>
+        <td>MidWest</td>
+        <td>Chicago</td>
+        <td>500 W. Madison St, 22nd & 23rd Floors</td>
+      </tr>
+      <tr class="active">
+        <td>Innovation Hub</td>
+        <td>MidWest</td>
+        <td>Chicago</td>
+        <td>500 W. Madison St, 22nd & 23rd Floors</td>
+      </tr>
+    </tbody>
+  </table>
+  <div id="center">
+    <form>
+    <a asp-area="" asp-page="/AdminTwo"><button type="button" id="purple" class="btn btn-primary btn-lg">Edit Office</button></a>
+    </form>
+  </div>
+</div>
+</body>
