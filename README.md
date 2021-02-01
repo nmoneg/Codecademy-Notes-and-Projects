@@ -1,3 +1,3 @@
 # nrm-repo
 
-Contains Codecademy activies in HTML, CSS, JS, Python, and SQL.
+Contains Codecademy activities in HTML, CSS, JS, Python, and SQL.
