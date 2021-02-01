@@ -1,3 +1,3 @@
 # nrm-repo
 
-This is an all-purpose repository to store in-progress and completed projects, large and small. 
+Contains Codecademy activies in HTML, CSS, JS, Python, and SQL.
